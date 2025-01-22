@@ -7,7 +7,7 @@ COPY pom.xml ./
 COPY src ./src
 
 # Package the application
-#RUN mvn clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 # Stage 2: Run
 FROM eclipse-temurin:21-jdk-jammy
@@ -17,7 +17,7 @@ WORKDIR /app
 EXPOSE 8080
 
 # Copy the built JAR file from the build stage
-COPY --from=build /app/target/udemy-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /app/target/klv-pu-back-0.0.1-SNAPSHOT.jar app.jar
 
 # Run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
