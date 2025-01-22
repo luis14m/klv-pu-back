@@ -7,7 +7,7 @@ COPY pom.xml ./
 COPY src ./src
 
 # Package the application
-RUN mvn clean package -DskipTests
+#RUN mvn clean package -DskipTests
 
 # Stage 2: Run
 FROM eclipse-temurin:21-jdk-jammy
