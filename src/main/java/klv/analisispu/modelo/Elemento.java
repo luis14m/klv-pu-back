@@ -27,7 +27,7 @@ public class Elemento{
 
 
 
-    @Column(length = 5)
+    @Column(length = 10)
     public String unidad;
 
     @Column(columnDefinition = "float default 1")

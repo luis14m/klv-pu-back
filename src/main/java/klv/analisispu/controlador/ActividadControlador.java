@@ -92,7 +92,7 @@ public class ActividadControlador {
             actividad.setUnidad(actividadRecibida.getUnidad());
             actividad.setCantidad(actividadRecibida.getCantidad());
             actividad.setPrecioUnitario(actividadRecibida.getPrecioUnitario());
-            actividad.setPrecioTotal();
+            //actividad.setPrecioTotal();
             this.actividadServicio.guardarActividad(actividad);
             return ResponseEntity.ok(actividad);
         } else {
