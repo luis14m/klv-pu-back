@@ -1,30 +1,23 @@
-
-# Stage 1: Build the application
-FROM eclipse-temurin:23-jdk AS builder
-
-# Set the working directory
+# Stage 1: Build
+FROM maven:3.9.5-eclipse-temurin-21 AS build
 WORKDIR /app
 
-# Copy the application code
-COPY . .
+# Copy the project files to the container
+COPY pom.xml ./
+COPY src ./src
 
-# Given permissions to mvnw
-RUN chmod +x mvnw
+# Package the application
+RUN mvn clean package -DskipTests
 
-# Build the application (requires Maven or Gradle)
-RUN ./mvnw clean package -DskipTests
-
-# Stage 2: Run the application
-FROM eclipse-temurin:23-jre
-
-# Set the working directory
+# Stage 2: Run
+FROM eclipse-temurin:21-jdk-jammy
 WORKDIR /app
 
-# Copy the JAR file from the builder stage
-COPY --from=builder /app/target/*.jar app.jar
-
-# Expose the port the app will run on
+# Expose the port Spring Boot runs on
 EXPOSE 8080
 
-# Command to run the application
+# Copy the built JAR file from the build stage
+COPY --from=build /app/target/udemy-0.0.1-SNAPSHOT.jar app.jar
+
+# Run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]

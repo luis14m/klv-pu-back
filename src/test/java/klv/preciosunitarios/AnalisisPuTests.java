@@ -1,10 +1,11 @@
 package klv.preciosunitarios;
 
+import klv.analisispu.AnalisisPu;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class PreciosunitariosApplicationTests {
+@SpringBootTest(classes = AnalisisPu.class)
+class AnalisisPuTests {
 
 	@Test
 	void contextLoads() {
