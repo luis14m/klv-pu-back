@@ -20,17 +20,17 @@ public class Actividad {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer idActividad;
 
-    @Column(unique = true, length = 5)
+    @Column(unique = true, length = 5, nullable = false)
     String codigo;
 
     @Column(nullable = false)
     String nombre;
 
-    @Column(length = 3)
-    String unidad;
-
     @Column(columnDefinition = "float default 1")
     float cantidad;
+
+    @Column(length = 3)
+    String unidad;
 
     Double precioUnitario;
 

@@ -2,7 +2,7 @@ package klv.analisispu.modelo;
 
 import jakarta.persistence.*;
 import lombok.*;
-import java.util.Set;
+
 
 
 @Entity
@@ -18,20 +18,16 @@ public class Elemento{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer idElemento;
 
-    @Column(unique = true, length = 5)
+    @Column(unique = true, length = 5, nullable = false)
     public String codigo;
 
     public String nombre;
 
-    public String descripcion;
-
-
-
-    @Column(length = 10)
-    public String unidad;
-
     @Column(columnDefinition = "float default 1")
     public float cantidad;
+
+    @Column(length = 8)
+    public String unidad;
 
     public Double precioUnitario;
 
