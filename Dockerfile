@@ -17,7 +17,7 @@ WORKDIR /app
 EXPOSE 8080
 
 # Copiar el archivo JAR al contenedor
-COPY --from=build target/klv-pu-back-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /app/target/klv-pu-back-0.0.1-SNAPSHOT.jar app.jar
 
 # Comando para ejecutar la aplicación
 ENTRYPOINT ["java", "-jar", "app.jar"]
