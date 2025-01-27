@@ -3,8 +3,7 @@ package klv.analisispu.modelo;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Data
@@ -40,12 +39,13 @@ public class Actividad {
         this.cantidad = 1;
     }
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "actividad_elementos",
             joinColumns = @JoinColumn(name = "actividad_id"),
             inverseJoinColumns = @JoinColumn(name = "elemento_id"))
-    private Set<Elemento> elementos = new HashSet<>();
+    private Set<Elemento> elementos= new HashSet<>();
+
 
     @NonNull
     public String getNombre() {

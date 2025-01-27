@@ -57,7 +57,7 @@ public class ActividadControlador {
                 }
             });
         }
-        actividad.setPrecioTotal();
+        //actividad.setPrecioTotal();
         logger.info("Actividad agregada: " + actividad);
 
         return this.actividadServicio.guardarActividad(actividad);
