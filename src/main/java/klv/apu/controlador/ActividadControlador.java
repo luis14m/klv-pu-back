@@ -1,11 +1,10 @@
-package klv.analisispu.controlador;
+package klv.apu.controlador;
 
 
-import klv.analisispu.excepcion.RecursoNoEncontradoExcepcion;
-import klv.analisispu.modelo.Actividad;
-import klv.analisispu.modelo.Elemento;
-import klv.analisispu.servicio.ActividadServicio;
-import klv.analisispu.servicio.ElementoServicio;
+import klv.apu.excepcion.RecursoNoEncontradoExcepcion;
+import klv.apu.modelo.Actividad;
+import klv.apu.servicio.ActividadServicio;
+import klv.apu.servicio.ElementoServicio;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +17,8 @@ import java.util.Map;
 
 @RestController
 
-//localhost:8080/analisispu
-@RequestMapping("analisispu")
+//localhost:8080/apu
+@RequestMapping("apu")
 
 @CrossOrigin(value = "http://localhost:4200/")
 
@@ -90,8 +89,7 @@ public class ActividadControlador {
             actividad.setCodigo(actividadRecibida.getCodigo());
             actividad.setNombre(actividadRecibida.getNombre());
             actividad.setUnidad(actividadRecibida.getUnidad());
-            actividad.setCantidad(actividadRecibida.getCantidad());
-            actividad.setPrecioUnitario(actividadRecibida.getPrecioUnitario());
+            actividad.setDescripcion(actividadRecibida.getDescripcion());
             //actividad.setPrecioTotal();
             this.actividadServicio.guardarActividad(actividad);
             return ResponseEntity.ok(actividad);

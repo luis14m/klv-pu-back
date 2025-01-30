@@ -1,6 +1,6 @@
-package klv.analisispu.servicio;
+package klv.apu.servicio;
 
-import klv.analisispu.modelo.Actividad;
+import klv.apu.modelo.Actividad;
 import java.util.List;
 
 public interface IActividadServicio {

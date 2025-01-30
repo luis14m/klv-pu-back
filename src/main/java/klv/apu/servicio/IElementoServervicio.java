@@ -1,6 +1,6 @@
-package klv.analisispu.servicio;
+package klv.apu.servicio;
 
-import klv.analisispu.modelo.Elemento;
+import klv.apu.modelo.Elemento;
 
 import java.util.List;
 

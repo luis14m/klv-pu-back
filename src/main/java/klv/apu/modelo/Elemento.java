@@ -1,4 +1,4 @@
-package klv.analisispu.modelo;
+package klv.apu.modelo;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -7,9 +7,9 @@ import lombok.*;
 
 @Entity
 @Data
-@Table(name="elemento")
+@Table(name="elementos")
 @AllArgsConstructor
-
+@NoArgsConstructor
 
 public class Elemento{
 
@@ -23,32 +23,16 @@ public class Elemento{
 
     public String nombre;
 
-    @Column(columnDefinition = "float default 1")
-    public float cantidad;
-
     @Column(length = 8)
     public String unidad;
 
-    public Double precioUnitario;
+    public String tipo;
 
-    public Double precioTotal;
+    public Double costoUnitario;
 
-    public Elemento() {
-        this.cantidad = 1;
-    }
 
    /*  @ManyToMany(fetch = FetchType.LAZY)
     *private Set<Actividad> actividades;
 */
-    public void setPrecioTotal() {
-
-        this.precioTotal =this.cantidad * this.precioUnitario;
-    }
-
-    @Override
-    public String toString() {
-
-        return getNombre();
-    }
 
 }

@@ -1,6 +1,6 @@
 package klv.preciosunitarios;
 
-import klv.analisispu.AnalisisPu;
+import klv.apu.AnalisisPu;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 

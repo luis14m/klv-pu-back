@@ -1,4 +1,4 @@
-package klv.analisispu.excepcion;
+package klv.apu.excepcion;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

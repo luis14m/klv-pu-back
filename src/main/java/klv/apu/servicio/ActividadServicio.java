@@ -1,10 +1,10 @@
-package klv.analisispu.servicio;
+package klv.apu.servicio;
 
 import jakarta.transaction.Transactional;
-import klv.analisispu.modelo.Actividad;
-import klv.analisispu.modelo.Elemento;
-import klv.analisispu.repositorio.ActividadRepositorio;
-import klv.analisispu.repositorio.ElementoRepositorio;
+import klv.apu.modelo.Actividad;
+import klv.apu.modelo.Elemento;
+import klv.apu.repositorio.ActividadRepositorio;
+import klv.apu.repositorio.ElementoRepositorio;
 import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

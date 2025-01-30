@@ -1,7 +1,7 @@
-package klv.analisispu.servicio;
+package klv.apu.servicio;
 
-import klv.analisispu.modelo.Elemento;
-import klv.analisispu.repositorio.ElementoRepositorio;
+import klv.apu.modelo.Elemento;
+import klv.apu.repositorio.ElementoRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

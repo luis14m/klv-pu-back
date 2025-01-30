@@ -1,4 +1,4 @@
-package klv.analisispu;
+package klv.apu;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

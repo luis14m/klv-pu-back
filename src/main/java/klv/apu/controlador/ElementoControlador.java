@@ -1,8 +1,8 @@
-package klv.analisispu.controlador;
+package klv.apu.controlador;
 
-import klv.analisispu.excepcion.RecursoNoEncontradoExcepcion;
-import klv.analisispu.modelo.Elemento;
-import klv.analisispu.servicio.ElementoServicio;
+import klv.apu.excepcion.RecursoNoEncontradoExcepcion;
+import klv.apu.modelo.Elemento;
+import klv.apu.servicio.ElementoServicio;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +34,7 @@ public class ElementoControlador {
     @PostMapping("/elementos")
     public Elemento agregarElemento(@RequestBody Elemento elemento) {
         logger.info("Elemento agregar: " + elemento);
-        elemento.setPrecioTotal();
+        //elemento.setPrecioTotal();
         return this.elementoServicio.guardarElemento(elemento);
     }
 
@@ -55,9 +55,9 @@ public class ElementoControlador {
             elemento.setCodigo(elementoRecibido.getCodigo());
             elemento.setNombre(elementoRecibido.getNombre());
             elemento.setUnidad(elementoRecibido.getUnidad());
-            elemento.setCantidad(elementoRecibido.getCantidad());
-            elemento.setPrecioUnitario(elementoRecibido.getPrecioUnitario());
-            elemento.setPrecioTotal();
+            elemento.setTipo(elementoRecibido.getTipo());
+            elemento.setCostoUnitario(elementoRecibido.getCostoUnitario());
+
             this.elementoServicio.guardarElemento(elemento);
             logger.info("Elemento actualizado: " + elemento);
             return ResponseEntity.ok(elemento);

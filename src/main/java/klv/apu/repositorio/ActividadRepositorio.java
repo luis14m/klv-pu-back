@@ -1,6 +1,6 @@
-package klv.analisispu.repositorio;
+package klv.apu.repositorio;
 
-import klv.analisispu.modelo.Actividad;
+import klv.apu.modelo.Actividad;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
