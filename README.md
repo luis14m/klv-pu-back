@@ -1,6 +1,6 @@
 ###     klv-pu-back
 
-CRUD con base de Datos Postgresql para Actividades y Elementos de contruccion. 
+CRUD con base de Datos Postgresql para Actividades y Elementos de construccion. 
 
 ### **Descripción Funcional de la Aplicación**
 
