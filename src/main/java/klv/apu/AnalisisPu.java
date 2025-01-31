@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AnalisisPu {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(AnalisisPu.class, args);
 	}
 
