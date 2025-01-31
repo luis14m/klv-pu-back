@@ -1,5 +1,6 @@
 ###     klv-pu-back
-Api Rest de precios unitarios. 
+
+CRUD con base de Datos Postgresql para Actividades y Elementos de contruccion. 
 
 ### **Descripción Funcional de la Aplicación**
 
